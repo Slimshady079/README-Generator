@@ -4,6 +4,7 @@ const renderLicenseBadge = (license) => {
   license != "No License"
     ? `![${license}](https://img.shields.io/badge/License-${license}-blue)`
     : "";
+  return `![${license}](https://img.shields.io/badge/License-${license}-blue)`;
 };
 
 function generateMarkdown({
@@ -18,7 +19,7 @@ function generateMarkdown({
   email,
 }) {
   let output = `# ${title}
-${() => renderLicenseBadge(license)}
+${renderLicenseBadge(license)}
 
 #### Table of Content:
 #### [Description](#description)
@@ -26,7 +27,7 @@ ${() => renderLicenseBadge(license)}
 #### [Usage](#usage)
 #### [Contributing](#contributing)
 #### [Tests](#tests)
-#### [Questions/Concerns](#questions)
+#### [Questions](#questions)
 
 ## Description:
 ${description}
@@ -43,7 +44,7 @@ ${contributing}
 ## Tests:
 ${tests}
 
-## Questions / Concerns:
+## Questions:
 [github](https://github.com/${github})
 [email](mailto:${email})
 
