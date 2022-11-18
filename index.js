@@ -1,6 +1,6 @@
+
 const { prompt } = require("inquirer");
 const questions = require("./questions");
+const generateMarkdown = require('./utils/generateMarkdown');
 
-prompt(questions).then((answers) => {
-  console.log(answers.title);
-});
+prompt(questions).then(generateMarkdown);

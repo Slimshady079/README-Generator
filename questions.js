@@ -11,7 +11,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "installaton",
+    name: "installation",
     message: "installation?",
   },
   {
@@ -23,7 +23,14 @@ const questions = [
     type: "list",
     name: "license",
     message: "License?",
-    choices: ["MIT", "ISC", "No License"],
+    choices: [
+      "MIT",
+      "Mozilla Public License 2.0",
+      "Eclipse Public License 2.0",
+      "GNU General Public License v3.0",
+      "Creative Commons Zero v1.0 Universal",
+      "No License",
+    ],
   },
   {
     type: "input",
@@ -37,8 +44,13 @@ const questions = [
   },
   {
     type: "input",
-    name: "questions",
-    message: "Questions",
+    name: "github",
+    message: "github?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "email?",
   },
 ];
 
